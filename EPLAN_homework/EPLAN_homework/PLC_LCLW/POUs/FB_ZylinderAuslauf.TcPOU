@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_ZylinderAuslauf" Id="{89dcefb7-7762-4274-8ce3-5883557cf7f7}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_ZylinderAuslauf
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[GVL_IO.xVentilAuslaufAS := GVL_IO.xWeicheAcceptBereit;
+GVL_IO.xVentilAuslaufGS := NOT GVL_IO.xWeicheAcceptBereit;
+
+GVL_IO.xZylinderAuslaufBereit := GVL_IO.xZylinderAuslaufAS;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

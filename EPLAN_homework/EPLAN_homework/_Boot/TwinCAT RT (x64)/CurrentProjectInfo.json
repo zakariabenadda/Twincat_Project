@@ -1,0 +1,1 @@
+{"project":{"name":"EPLAN_homework","platform":"TwinCAT RT (x64)","created":"2026-10-06T14:28:44"},"components":[{"name":"TcIo","type":1},{"name":"TcNc","type":1},{"name":"TcPlc30","type":1},{"name":"TcRTime","type":1},{"name":"TcRtsObjects","type":1}],"references":[],"sub_projects":[{"name":"PLC_LCLW","file":"Plc/Port_851.json"}]}

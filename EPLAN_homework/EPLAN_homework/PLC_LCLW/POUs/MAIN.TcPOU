@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="MAIN" Id="{6e2e337b-042f-42f5-9b88-9dd5700bf4b7}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+    fbEinlauf : FB_Einlauf;
+	fbZylinderEinlauf : FB_ZylinderEinlauf;
+    fbSpanner : FB_Spanner;
+	fbWeiche : FB_Weiche;
+	fbAuswerfer : FB_Auswerfer;
+    fbAusblasen : FB_Ausblasen;
+	fbZylinderAuslauf : FB_ZylinderAuslauf;
+    fbAuslauf : FB_Auslauf;
+    fbAuswurfBypass : FB_AuswurfBypass;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[GVL_IO.xLaserEnable := NOT GVL_IO.xNotHalt_Betaetigt;
+fbEinlauf();
+fbZylinderEinlauf();
+fbSpanner();
+fbWeiche();
+fbAuswerfer();
+fbAusblasen();
+fbZylinderAuslauf();
+fbAuslauf();
+fbAuswurfBypass();]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

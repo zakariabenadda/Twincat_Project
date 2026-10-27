@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <GVL Name="GVL_IO" Id="{adcc107d-bf36-47ad-8ae7-68d13757d587}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	 xNotHalt_Betaetigt : BOOL;           // E0.1 - Not-Halt betätigt 
+     xLaserEnable : BOOL;                 // A0.1 - LaserEnable
+	 xLichtschranke_Einlauf : BOOL;       // E1052.0 - Lichtschranke Einlauf
+     xServo_Einlauf_Eingerastet : BOOL;   // E1052.1 - Servo Einlauf eingerastet
+     xServo_Einlauf_AS : BOOL;            // E1052.2 - Servo Einlauf AS
+     xServo_Einlauf_GS : BOOL;            // E1052.3 - Servo Einlauf GS
+	 xEinlaufBereit : BOOL;               // Part ready at infeed (calculated, not a direct sensor)
+	 xZylinderSpannerAS : BOOL;           // E1050.2 - Zylinder Spanner AS
+     xZylinderSpannerGS : BOOL;           // E1050.3 - Zylinder Spanner GS
+     xVentilSpannerAS : BOOL;             // A1050.2 - Ventil Spanner AS
+     xVentilSpannerGS : BOOL;             // A1050.3 - Ventil Spanner GS
+	 xZylinderEinlaufAS : BOOL;           // E1051.0 - Zylinder Einlauf AS
+     xZylinderEinlaufGS : BOOL;           // E1051.1 - Zylinder Einlauf GS
+     xVentilEinlaufAS : BOOL;             // A1051.0 - Ventil Einlauf AS
+     xVentilEinlaufGS : BOOL;             // A1051.1 - Ventil Einlauf GS
+     xZylinderEinlaufBereit : BOOL;       // Calculated: cylinder confirmed in position
+	 xSpannerBereit : BOOL;               // Calculated: clamp confirmed closed (from E1050.2 feedback)
+     xPartOK : BOOL;                      // PLACEHOLDER: simulated quality decision, normally from an external vision/quality system not present in this Eplan/pneumatic scope — forced manually for testing
+     xZylinderWeicheAS : BOOL;   // E1050.4 - Zylinder Weiche AS
+     xZylinderWeicheGS : BOOL;   // E1050.5 - Zylinder Weiche GS
+     xVentilWeicheAS : BOOL;     // A1050.4 - Ventil Weiche AS
+     xVentilWeicheGS : BOOL;     // A1050.5 - Ventil Weiche GS
+     xWeicheRejectBereit : BOOL; // Calculated: diverter confirmed in reject position
+     xWeicheAcceptBereit : BOOL; // Calculated: diverter confirmed in accept/straight position
+	 xZylinderAuswerferAS : BOOL;   // E1050.0 - Zylinder Auswerfer AS
+     xZylinderAuswerferGS : BOOL;   // E1050.1 - Zylinder Auswerfer GS
+     xVentilAuswerferAS : BOOL;     // A1050.0 - Ventil Auswerfer AS
+     xVentilAuswerferGS : BOOL;     // A1050.1 - Ventil Auswerfer GS
+     xVentilAusblasenAS : BOOL;     // A1051.4 - Ventil Ausblasen AS
+     xVentilAusblasenGS : BOOL;     // A1051.5 - Ventil Ausblasen GS
+     xAuswerferBereit : BOOL;       // Calculated: ejector confirmed extended
+	 xZylinderAuslaufAS : BOOL;     // E1051.2 - Zylinder Auslauf AS
+     xZylinderAuslaufGS : BOOL;     // E1051.3 - Zylinder Auslauf GS
+     xVentilAuslaufAS : BOOL;       // A1051.2 - Ventil Auslauf AS
+     xVentilAuslaufGS : BOOL;       // A1051.3 - Ventil Auslauf GS
+     xZylinderAuslaufBereit : BOOL; // Calculated: outfeed cylinder confirmed in position
+
+     xLichtschranke_Auslauf : BOOL;       // E1052.4 - Lichtschranke Auslauf
+     xServo_Auslauf_Eingerastet : BOOL;   // E1052.5 - Servo Auslauf eingerastet
+     xServo_Auslauf_AS : BOOL;            // E1052.6 - Servo Auslauf AS
+	 xServo_Auslauf_GS : BOOL;            // E1052.7 - Servo Auslauf GS
+	 xAuslaufBereit : BOOL;               // Calculated: part confirmed exited
+
+	 xVentilAuswurfBypassAS : BOOL;   // A1051.6 - Ventil Auswurf Bypass AS
+	 xVentilAuswurfBypassGS : BOOL;   // A1051.7 - Ventil Auswurf Bypass GS
+	 xBypassTrigger : BOOL;   // PLACEHOLDER: no defining condition exists in either drawing, forced manually for testing
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_AuswurfBypass" Id="{bf5e9edd-9866-4e2f-97b4-44502d3c0113}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_AuswurfBypass
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	tonBypass : TON;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[tonBypass(IN := GVL_IO.xBypassTrigger, PT := T#1S);
+
+GVL_IO.xVentilAuswurfBypassAS := GVL_IO.xBypassTrigger AND NOT tonBypass.Q;
+GVL_IO.xVentilAuswurfBypassGS := NOT GVL_IO.xVentilAuswurfBypassAS;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

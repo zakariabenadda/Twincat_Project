@@ -1,0 +1,50 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\Documents\\TcXaeShell\\EPLAN_homework\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{494C92C5-4596-4794-B18A-83D7B0A07C6D}|EPLAN_homework\\PLC_LCLW\\PLC_LCLW.plcproj|C:\\Users\\PC\\Documents\\TcXaeShell\\EPLAN_homework\\EPLAN_homework\\PLC_LCLW\\GVLs\\GVL_IO.TcGVL||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
+      "RelativeMoniker": "D:0:0:{494C92C5-4596-4794-B18A-83D7B0A07C6D}|EPLAN_homework\\PLC_LCLW\\PLC_LCLW.plcproj|solutionrelative:EPLAN_homework\\PLC_LCLW\\GVLs\\GVL_IO.TcGVL||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C92C5-4596-4794-B18A-83D7B0A07C6D}|EPLAN_homework\\PLC_LCLW\\PLC_LCLW.plcproj|C:\\Users\\PC\\Documents\\TcXaeShell\\EPLAN_homework\\EPLAN_homework\\PLC_LCLW\\POUs\\FB_ZylinderEinlauf.TcPOU||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
+      "RelativeMoniker": "D:0:0:{494C92C5-4596-4794-B18A-83D7B0A07C6D}|EPLAN_homework\\PLC_LCLW\\PLC_LCLW.plcproj|solutionrelative:EPLAN_homework\\PLC_LCLW\\POUs\\FB_ZylinderEinlauf.TcPOU||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 303,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GVL_IO",
+              "DocumentMoniker": "C:\\Users\\PC\\Documents\\TcXaeShell\\EPLAN_homework\\EPLAN_homework\\PLC_LCLW\\GVLs\\GVL_IO.TcGVL",
+              "RelativeDocumentMoniker": "EPLAN_homework\\PLC_LCLW\\GVLs\\GVL_IO.TcGVL",
+              "ToolTip": "GVL_IO [EPLAN_homework.PLC_LCLW]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-27T12:54:20.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FB_ZylinderEinlauf",
+              "DocumentMoniker": "C:\\Users\\PC\\Documents\\TcXaeShell\\EPLAN_homework\\EPLAN_homework\\PLC_LCLW\\POUs\\FB_ZylinderEinlauf.TcPOU",
+              "RelativeDocumentMoniker": "EPLAN_homework\\PLC_LCLW\\POUs\\FB_ZylinderEinlauf.TcPOU",
+              "ToolTip": "FB_ZylinderEinlauf [EPLAN_homework.PLC_LCLW]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-27T12:54:09.257Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

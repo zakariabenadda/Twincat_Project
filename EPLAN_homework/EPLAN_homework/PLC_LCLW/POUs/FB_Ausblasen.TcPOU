@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_Ausblasen" Id="{afabcb07-bafc-4fff-915f-45a470bd8161}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Ausblasen
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+tonBlow : TON;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[tonBlow(IN := GVL_IO.xAuswerferBereit, PT := T#1S);
+
+GVL_IO.xVentilAusblasenAS := GVL_IO.xAuswerferBereit AND NOT tonBlow.Q;
+GVL_IO.xVentilAusblasenGS := NOT GVL_IO.xVentilAusblasenAS;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_Weiche" Id="{94a08d71-f822-4b7b-b7c0-bb78d04b449e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Weiche
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[GVL_IO.xVentilWeicheAS := GVL_IO.xSpannerBereit AND NOT GVL_IO.xPartOK;
+GVL_IO.xVentilWeicheGS := GVL_IO.xSpannerBereit AND GVL_IO.xPartOK;
+
+GVL_IO.xWeicheRejectBereit := GVL_IO.xZylinderWeicheAS;
+GVL_IO.xWeicheAcceptBereit := GVL_IO.xZylinderWeicheGS;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

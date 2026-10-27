@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_Auslauf" Id="{a1863f5a-1c9a-45c2-b074-f03ce1135c66}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Auslauf
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF GVL_IO.xLichtschranke_Auslauf AND GVL_IO.xServo_Auslauf_GS THEN
+    GVL_IO.xAuslaufBereit := TRUE;
+ELSIF NOT GVL_IO.xLichtschranke_Auslauf THEN
+    GVL_IO.xAuslaufBereit := FALSE;
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

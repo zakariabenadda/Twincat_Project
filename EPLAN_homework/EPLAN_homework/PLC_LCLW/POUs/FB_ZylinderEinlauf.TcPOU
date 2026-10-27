@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_ZylinderEinlauf" Id="{2be8a410-bc81-4508-bfee-41359122ab75}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_ZylinderEinlauf
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[GVL_IO.xVentilEinlaufAS := GVL_IO.xEinlaufBereit;
+GVL_IO.xVentilEinlaufGS := NOT GVL_IO.xEinlaufBereit;
+GVL_IO.xZylinderEinlaufBereit := GVL_IO.xZylinderEinlaufAS;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

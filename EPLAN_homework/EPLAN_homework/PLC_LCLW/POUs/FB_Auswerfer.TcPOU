@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_Auswerfer" Id="{f5fe8941-58c6-4719-9129-89b405f01ed3}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Auswerfer
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[GVL_IO.xVentilAuswerferAS := GVL_IO.xWeicheRejectBereit;
+GVL_IO.xVentilAuswerferGS := NOT GVL_IO.xWeicheRejectBereit;
+
+GVL_IO.xAuswerferBereit := GVL_IO.xZylinderAuswerferAS;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

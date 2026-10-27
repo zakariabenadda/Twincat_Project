@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_Spanner" Id="{48f5b05a-5920-427c-854a-9de49296cf9a}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Spanner
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[GVL_IO.xVentilSpannerAS := GVL_IO.xZylinderEinlaufBereit;
+GVL_IO.xVentilSpannerGS := NOT GVL_IO.xZylinderEinlaufBereit;
+GVL_IO.xSpannerBereit := GVL_IO.xZylinderSpannerAS;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

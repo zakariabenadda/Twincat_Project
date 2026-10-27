@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_Einlauf" Id="{1fbece50-0130-45db-9784-d8a45e6787fd}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Einlauf
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF GVL_IO.xLichtschranke_Einlauf AND GVL_IO.xServo_Einlauf_GS THEN
+    GVL_IO.xEinlaufBereit := TRUE;
+ELSIF NOT GVL_IO.xLichtschranke_Einlauf THEN
+    GVL_IO.xEinlaufBereit := FALSE;
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
